@@ -37,6 +37,8 @@ export class AdminProductsComponent implements OnInit, OnDestroy{
   filter(query: String){
     this.filteredProducts = (query)?
      this.products.filter(p =>  p.title.toLowerCase().includes(query.toLowerCase())) : this.products;
+    
+    this.initialiseTable(this.filteredProducts)
   } 
   ngOnInit() {
   }

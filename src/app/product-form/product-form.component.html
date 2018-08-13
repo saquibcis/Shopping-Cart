@@ -41,7 +41,7 @@
         </form>
   </div>
   <div class="col-md-6">
-      <div class="card" style="width: 18rem;">
+      <div *ngIf="errTitle.value" class="card" style="width: 18rem;">
         <img *ngIf="errimage.value"  class="card-img-top" src="{{errimage.value}}">
         <div class="card-body">
           <h3 class="card-title">{{ errTitle.value }}</h3>
